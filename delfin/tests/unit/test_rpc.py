@@ -30,6 +30,7 @@ class RPCTestCase(test.TestCase):
         self.assertEqual(rpc.utils.DO_NOTHING, rpc.NOTIFIER)
         serializer_mock.assert_not_called()
 
+    # First testcase added
     @mock.patch.object(rpc, 'messaging')
     def test_init_notifications(self, messaging_mock):
         rpc.init(test.CONF)
